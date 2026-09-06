@@ -1,0 +1,15 @@
+{
+  "name": "NOVAREG GEDMVP",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8055],
+  "portsAttributes": {
+    "8055": {
+      "label": "Directus",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "chmod +x scripts/start-directus.sh"
+}
